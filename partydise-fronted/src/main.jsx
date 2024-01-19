@@ -4,6 +4,7 @@ import { Auth0Provider } from '@auth0/auth0-react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import './index.css';
+import Layout from './Components/Layout';
 
 const root = document.getElementById('root');
 
@@ -20,7 +21,9 @@ reactRoot.render(
       }}
     >
       <Router>
-        <App />
+        <Layout>
+           <App />
+        </Layout>
       </Router>
     </Auth0Provider>
   </React.StrictMode>
