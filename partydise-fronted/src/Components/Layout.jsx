@@ -7,10 +7,20 @@ function Layout({children }) {
             main:"#9747FF",
           },
          secondary:{
-          main:grey[50],
+          main:"#F4F4F4"
          },
          
         },
+        components:{
+          MuiButton:{
+            styleOverrides:{
+                root:{
+                    textTransform: 'capitalize',
+                    
+                }
+            }
+          }
+        }
       }
       
       );

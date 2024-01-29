@@ -4,6 +4,7 @@ import './App.css';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
 import WorkerCreator from './Pages/WorkerCreator';
+import ReenactorCreator from './Pages/reenactorCreator';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/login" element={<Login/>} />
-      <Route path="/nuevo-trabajador" element={<WorkerCreator/>} />
+      <Route path="/trabajadores" element={<WorkerCreator/>} />
+      <Route path='/recreadores'element={<ReenactorCreator/>}/>
     </Routes>
   );
 }

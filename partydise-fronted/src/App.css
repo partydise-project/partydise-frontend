@@ -7,3 +7,7 @@
 body{
   background-color: #FAF5FF;
 }
+.WorkerForm{
+  border: solid 0.2px #8431f03d;
+  height: 26px;
+}
