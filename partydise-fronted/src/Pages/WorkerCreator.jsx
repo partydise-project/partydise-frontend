@@ -5,16 +5,13 @@ import { Stack, useMediaQuery } from '@mui/material'
 import WorkerView from '../Components/WorkerComponents/WorkerViewComponets/WorkerView'
 import NavMovail from '../Components/WorkerComponents/Nav/NavMovail'
 
-
-
-
 export default function WorkerCreator() {
 
-  const isMobile = useMediaQuery('(max-width:600px)');
+  const isMobile = useMediaQuery('(max-width:800px)');
   return (
     <>
-    
-    {isMobile ? (
+      <>
+     {isMobile ? (
   <>
     {isMobile && <NavMovail />}
     <Stack direction={{
@@ -22,31 +19,29 @@ export default function WorkerCreator() {
       sm: 'column',
       md: 'row',
       lg: 'row'
-    }} spacing={12} sx={{ marginTop: 4 }}>
+    }} spacing={7} sx={{ marginTop: 4 }}>
       <Stack direction='column' spacing={2}>
         {!isMobile && <SerchBarworker />}
-        <WorkerView />
+        <WorkerView/>
       </Stack>
     </Stack>
   </>
 ) : (
-  <Stack direction={{
-    xs: 'column',
-    sm: 'column',
-    md: 'row',
-    lg: 'row'
-  }} spacing={12}>
-    {isMobile ? null : <Navbar />}
-    <Stack direction='column' spacing={2}>
-      {!isMobile && <SerchBarworker />}
-      <WorkerView />
-    </Stack>
+<Stack direction={{
+  xs: 'column',
+  sm: 'column',
+  md: 'row',
+  lg: 'row'
+}} spacing={33} alignItems="center"sx={{width:"100vh"}} >
+  {isMobile ? null : <Navbar />}
+  <Stack direction='column' spacing={3}>
+    {!isMobile && <SerchBarworker />}
+    <WorkerView/>
   </Stack>
+</Stack>
+
 )}
-
-
-
-
-    </>
+   </>
+ </>
   )
 }

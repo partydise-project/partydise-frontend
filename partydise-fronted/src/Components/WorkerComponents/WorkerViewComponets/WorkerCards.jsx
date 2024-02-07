@@ -9,19 +9,19 @@ export default function WorkerCards() {
     <Card sx={{
   maxWidth: {
     xs: 400,  
-    sm: 300,    
+    sm: 900,    
     md: 80000, 
-    lg: 10000,  
+    lg: 1200,  
   }
 }}>
       <Stack
       direction={{
         xs: 'column', 
-        sm: 'column', 
+        sm: 'row', 
         md: 'row',    
         lg: 'row'     
       }}
-      alignItems={{xs:'center'}}
+      alignItems={{xs:'center',lg:'center'}}
       >
          <div style={{ overflow: 'hidden', maxHeight: 150 }}>
       <img src='https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg' alt="Profile" style={{ width: '100%', objectFit:"fill"}} />

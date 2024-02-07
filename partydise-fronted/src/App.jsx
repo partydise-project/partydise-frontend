@@ -8,12 +8,11 @@ import ReenactorCreator from './Pages/reenactorCreator';
 
 function App() {
   return (
-  
-    <Routes>
+  <Routes>
       <Route path="/" element={<Home/>} />
-      <Route path="/login" element={<Login/>} />
-      <Route path="/trabajadores" element={<WorkerCreator/>} />
-      <Route path='/recreadores'element={<ReenactorCreator/>}/>
+      <Route path="/login" element={<Login />} />
+      <Route path="/Trabajadores" element={<WorkerCreator />} />
+      <Route path='/Recreadores' element={<ReenactorCreator />} />
     </Routes>
   );
 }

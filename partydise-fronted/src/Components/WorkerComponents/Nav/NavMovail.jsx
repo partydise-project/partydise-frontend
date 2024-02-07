@@ -8,14 +8,16 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import '@fontsource/roboto/300.css';
+import Button from '@mui/material/Button'
 
-const pages = ['calendario', 'fechas', 'planes','clientes','personal'];
-const settings = ['perfil',  'Dashboard', 'Logout'];
+const pages = ['calendario', 'fechas', 'planes', 'clientes', 'Trabajadores','Recreadores'];
+const settings = ['perfil', 'Dashboard', 'Logout'];
 
 function NavMovail() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -49,7 +51,7 @@ function NavMovail() {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: 'roboto',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -95,7 +97,7 @@ function NavMovail() {
               ))}
             </Menu>
           </Box>
-         
+
           <Typography
             variant="h7"
             noWrap
@@ -106,30 +108,27 @@ function NavMovail() {
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily: 'roboto',
-              
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-        !Hola! Andres felipe 
+            !Hola! Andres felipe
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
+              <Link key={page} to={`/${page}`} style={{ textDecoration: 'none', color: 'inherit' }} >
+                <Button variant="contained" color="primary">
+                 {page}
+                </Button>
+              </Link>
             ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar alt="Remy Sharp" src="https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg" />
+                <Avatar alt="Remy Sharp" src="https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg" />
               </IconButton>
             </Tooltip>
             <Menu

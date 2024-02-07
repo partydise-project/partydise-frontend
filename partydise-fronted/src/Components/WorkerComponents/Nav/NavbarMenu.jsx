@@ -7,6 +7,7 @@ import { createTheme, Button, Box, Stack } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
 import '@fontsource/roboto/300.css';
+import { Link } from 'react-router-dom';
 
 const theme = createTheme({
   
@@ -53,18 +54,22 @@ export default function NavbarMenu() {
           Personal
         </AccordionSummary>
         <AccordionDetails>
-        <Box sx={{backgroundColor:'#F4F4F4',height:90,width:120}}>
+        <Box sx={{backgroundColor:'#F4F4F4',height:90,width:155}}>
           <Stack
            direction="column"
            justifyContent="space-between"
            alignItems="center"
            spacing={1} >
-        <Button variant="contained" color='primary' sx={{width:100}} >
-          Recreador
-        </Button>
-        <Button variant='text'color='primary' >
-          Trabajador
-        </Button>
+        <Link to="/Recreadores">
+      <Button variant='outlined' color='primary' sx={{width:135}}>
+        Recreadores
+      </Button>
+    </Link>
+    <Link to="/Trabajadores">
+      <Button variant="contained" color='primary' sx={{width:135}}>
+        Trabajadores
+      </Button>
+    </Link>
         </Stack>
         </Box>
         </AccordionDetails>

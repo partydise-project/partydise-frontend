@@ -33,6 +33,7 @@ export default function WorkerModal() {
         TransitionComponent={Transition}
         keepMounted
         onClose={handleClose}
+        fullWidth="xl"
         aria-describedby="Crea un nuevo administrador"
       >
         <DialogTitle>{"crea un nuevo administrador"}</DialogTitle>

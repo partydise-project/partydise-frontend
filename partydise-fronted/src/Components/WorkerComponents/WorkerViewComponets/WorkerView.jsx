@@ -22,11 +22,11 @@ export default function WorkerView() {
           md: 'row',
           lg: 'row'
         }}
-          justifyContent="space-around"
+          justifyContent={"space-between"}
           alignItems="center"
-          spacing={4}
+          spacing={6}
         >
-          <Typography variant="h4" color="initial"> Administradores</Typography>
+          <Typography variant="h4" color="initial">Trabajadores</Typography>
           <WorkerModal/>
         </Stack>
         <Divider />

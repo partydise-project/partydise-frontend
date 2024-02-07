@@ -15,32 +15,43 @@ export default function Navbar() {
 
   return (
     <>
-      <Box sx={{ backgroundColor: 'white', width: 170, height: "100vh", position: 'relative' }}>
-        <Stack direction="column" justifyContent="center" alignItems="center" spacing={2.5}>
-          <div style={{ marginTop: 20 }}> <Logo /></div>
-          <Button variant="text" color="primary" startIcon={<AccountCircleOutlinedIcon />}>
-            Mi Perfil
-          </Button>
-          <Button variant="text" color="primary" startIcon={<InsertInvitationOutlinedIcon />}>
-            fechas
-          </Button>
-          <Button variant="text" color="primary" startIcon={<CelebrationOutlinedIcon />}>
-            planes
-          </Button>
-          <Button variant="text" color="primary" startIcon={<PersonOutlineOutlinedIcon />}>
-            Clientes
-          </Button>
-          <Button variant="text" color="primary" startIcon={<CakeOutlinedIcon />}>
-            Eventos
-          </Button>
-          <NavbarMenu />
-        </Stack>
-        <Box sx={{ position: 'absolute', bottom: 0, left: 0, width: '100%', backgroundColor: '#9747FF', height: 70 }}>
-          <Button variant="text" color="secondary" startIcon={<LogoutIcon />}>
-            Logout
-          </Button>
-        </Box>
-      </Box>
+    <Box sx={{ 
+ backgroundColor: 'white',
+ width: 200,
+ height: '100%',
+ position: 'fixed',
+ top: 0,
+ left: 0,
+ display: 'flex',
+ flexDirection: 'column'
+
+    }}>
+  <Stack direction="column" justifyContent="center" alignItems="center" spacing={3} sx={{ flex: 1 }}>
+    <div style={{ marginTop: -25}}> <Logo /></div>
+    <Button variant="text" color="primary" startIcon={<AccountCircleOutlinedIcon />}>
+      Mi Perfil
+    </Button>
+    <Button variant="text" color="primary" startIcon={<InsertInvitationOutlinedIcon />}>
+      fechas
+    </Button>
+    <Button variant="text" color="primary" startIcon={<CelebrationOutlinedIcon />}>
+      planes
+    </Button>
+    <Button variant="text" color="primary" startIcon={<PersonOutlineOutlinedIcon />}>
+      Clientes
+    </Button>
+    <Button variant="text" color="primary" startIcon={<CakeOutlinedIcon />}>
+      Eventos
+    </Button>
+    <NavbarMenu />
+  </Stack>
+  <Box sx={{ backgroundColor: '#9747FF', height: 70 }}>
+    <Button variant="text" color="secondary" startIcon={<LogoutIcon />}>
+      Logout
+    </Button>
+  </Box>
+</Box>
+
 
     </>
   )
