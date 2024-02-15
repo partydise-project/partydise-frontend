@@ -7,15 +7,15 @@ import './index.css';
 import Layout from './Components/Layout';
 
 const root = document.getElementById('root');
-
-
+const domain=import.meta.env.VITE_REACT_APP_AUTHO_DOMAIN
+const clientId=import.meta.env.VITE_REACT_APP_AUTHO_CLIENT_ID
 const reactRoot = ReactDOM.createRoot(root);
 
 reactRoot.render(
   <React.StrictMode>
     <Auth0Provider
-      domain="dev-2my3nlwvtd1vb8kx.us.auth0.com"
-      clientId="ziWyILXdWJt0Dc7eIsI9MJmPC6H7cy6D"
+      domain={domain}
+      clientId={clientId}
       authorizationParams={{
         redirect_uri: window.location.origin
       }}
